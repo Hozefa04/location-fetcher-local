@@ -8,13 +8,34 @@ function App() {
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
-      openInNewTab(position.coords.latitude, position.coords.longitude);
+      // var popup = window.open("http://www.google.ca", "_blank");
+      // console.log(popupBlockerChecker.check(popup));
+
+      var windowName = "userConsole";
+      var popUp = window.open(
+        "http://www.google.in",
+        windowName,
+        "width=1, height=1, left=0, top=0"
+      );
+      if (popUp == null || typeof popUp == "undefined") {
+        // alert(
+        //   'Please disable your pop-up blocker and click the "Open" link again.'
+        // );
+        openInNewTab(position.coords.latitude, position.coords.longitude, true);
+      } else {
+        popUp.close();
+        openInNewTab(
+          position.coords.latitude,
+          position.coords.longitude,
+          false
+        );
+      }
     });
   }, []);
 
-  const openInNewTab = (lat, long) => {
+  const openInNewTab = (lat, long, popup) => {
     window.open(
-      `http://localhost:58795/?para1=${lat}&para2=${long}&browserName=${browserName}`,
+      `http://localhost:58795/?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}`,
       "_self",
       "noopener,noreferrer"
     );
