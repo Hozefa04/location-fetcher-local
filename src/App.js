@@ -8,10 +8,8 @@ function App() {
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
-      // var popup = window.open("http://www.google.ca", "_blank");
-      // console.log(popupBlockerChecker.check(popup));
 
-      var windowName = "userConsole";
+      var windowName = "popup check";
       var popUp = window.open(
         "http://www.google.in",
         windowName,
