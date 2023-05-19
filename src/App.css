@@ -1,12 +1,120 @@
 .App {
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
   text-align: center;
 }
 
-img {
-  margin-top: 200px;
+.note {
+  font-size: 2em;
+  font-weight: bold;
+  background-color: white;
 }
 
-.note {
-  font-size: 32;
-  font-weight: bold;
+.background {
+  width: 100%;
+  /* background-image: url("images/bg.png"); */
+  /* background-repeat: no-repeat; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/*
+.storeLogo img {
+  width: 200px;
+  margin-bottom: 48px;
+} */
+
+.bg {
+  /* position: absolute; */
+  height: 100vh;
+  /* top: 0;
+  left: 0; */
+}
+
+.store {
+  position: absolute;
+  width: 150px;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  top: 22%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.download-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: #007AFF;
+  font-weight: 700;
+  padding: 12px;
+  font-size: 22px;
+}
+
+.allow-text {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  padding: 12px;
+  font-size: 22px;
+}
+
+.download-container {
+  background-color: black;
+  border-radius: 50px;
+  height: 42px;
+  width: 80%;
+  bottom: 30%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-text {
+  color: white;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apple-logo {
+  width: 24px;
+  margin-right: 8px;
+}
+
+.android-logo {
+  width: 18px;
+  margin-right: 8px;
 }
