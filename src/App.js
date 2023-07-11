@@ -4,10 +4,11 @@ import { browserName } from "react-device-detect";
 // import appLogo from "./images/appicon.png";
 import appLogo from "./images/applogo.png";
 import appBg from "./images/bg.png";
-import appStoreLogo from "./images/appstore.png";
-import playStoreLogo from "./images/play.png";
-import appleLogo from "./images/apple-logo.jpeg";
-import androidLogo from "./images/android-logo.png";
+// import appStoreLogo from "./images/appstore.png";
+// import playStoreLogo from "./images/play.png";
+// import appleLogo from "./images/apple-logo.jpeg";
+// import androidLogo from "./images/android-logo.png";
+import header from "./images/header.png";
 
 function App() {
   useEffect(() => {
@@ -81,7 +82,8 @@ function App() {
   const openInNewTab = (lat, long, popup) => {
     window.open(
       // `http://localhost:58795/?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=false`,
-      `https://shotcaller-test.web.app?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=false`,
+      // `https://now.playshotcaller.com/?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=false`,
+      `https://shotcaller-test.web.app/?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=false`,
       "_self",
       "noopener,noreferrer"
     );
@@ -89,8 +91,9 @@ function App() {
 
   const openInNewTabNoLocation = (popup) => {
     window.open(
-      // `http://localhost:58795/?browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=true`,
-      `https://shotcaller-test.web.app?browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=true`,
+      // `https://now.playshotcaller.com/?browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=true`,
+      // `http://localhost:58795/?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=false`,
+      `https://shotcaller-test.web.app/?browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=true`,
       "_self",
       "noopener,noreferrer"
     );
@@ -104,10 +107,11 @@ function App() {
         {getMobileOperatingSystem() === "iOS" ? (
           <a href="https://apps.apple.com/in/app/shotcaller-make-sports-picks/id1558033440">
             <span className="allow-text">
-              Please allow location permission & popup to load games
+              To Play Games, allow location permission
             </span>
+            <img className="header" src={header} alt="store" />
             <img className="logo" src={appLogo} alt="" />
-            <img className="store" src={appStoreLogo} alt="" />
+            {/* <img className="store" src={appStoreLogo} alt="" />
             <span className="download-text">
               Download app for best experience
             </span>
@@ -116,16 +120,17 @@ function App() {
                 <img className="apple-logo" src={appleLogo} alt="" />
                 <p className="store-text">Download iOS App</p>
               </div>
-            </div>
+            </div> */}
           </a>
         ) : (
           <a href="https://play.google.com/store/apps/details?id=com.app.shotcaller">
             <span className="allow-text">
-              Please allow location permission & popup to load games
+              To Play Games, allow location permission
             </span>
             {/*<span className="allow-text">Refresh browser & allow location permission & popups to load games</span>*/}
+            <img className="header" src={header} alt="store" />
             <img className="logo" src={appLogo} alt="" width={"20px"} />
-            <img className="store" src={playStoreLogo} alt="" />
+            {/* <img className="store" src={playStoreLogo} alt="" />
             <span className="download-text">
               Download app for best experience
             </span>
@@ -134,7 +139,7 @@ function App() {
                 <img className="android-logo" src={androidLogo} alt="" />
                 <p className="store-text">Download Android App</p>
               </div>
-            </div>
+            </div> */}
           </a>
         )}
 
