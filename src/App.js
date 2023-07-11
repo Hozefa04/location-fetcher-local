@@ -80,7 +80,8 @@ function App() {
 
   const openInNewTab = (lat, long, popup) => {
     window.open(
-      `http://localhost:58795/?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=false`,
+      // `http://localhost:58795/?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=false`,
+      `shotcaller-test.web.app?para1=${lat}&para2=${long}&browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=false`,
       "_self",
       "noopener,noreferrer"
     );
@@ -88,7 +89,8 @@ function App() {
 
   const openInNewTabNoLocation = (popup) => {
     window.open(
-      `http://localhost:58795/?browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=true`,
+      // `http://localhost:58795/?browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=true`,
+      `shotcaller-test.web.app?browserName=${browserName}&isPopupBlocked=${popup}&isGlobal=true`,
       "_self",
       "noopener,noreferrer"
     );
