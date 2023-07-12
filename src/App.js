@@ -33,16 +33,15 @@ function App() {
         //   );
         // }
 
-        openInNewTab(
-          position.coords.latitude,
-          position.coords.longitude,
-          false
-        );
+        // openInNewTab(
+        //   position.coords.latitude,
+        //   position.coords.longitude,
+        //   false
+        // );
       },
       function (error) {
-        openInNewTabNoLocation(false);
+        // openInNewTabNoLocation(false);
         // var popUp = checkPopup();
-
         // if (popUp == null || typeof popUp == "undefined") {
         //   openInNewTabNoLocation(true);
         // } else {
