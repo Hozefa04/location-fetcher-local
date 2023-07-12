@@ -33,14 +33,14 @@ function App() {
         //   );
         // }
 
-        // openInNewTab(
-        //   position.coords.latitude,
-        //   position.coords.longitude,
-        //   false
-        // );
+        openInNewTab(
+          position.coords.latitude,
+          position.coords.longitude,
+          false
+        );
       },
       function (error) {
-        // openInNewTabNoLocation(false);
+        openInNewTabNoLocation(false);
         // var popUp = checkPopup();
         // if (popUp == null || typeof popUp == "undefined") {
         //   openInNewTabNoLocation(true);
@@ -52,14 +52,14 @@ function App() {
     );
   }, []);
 
-  const checkPopup = () => {
-    var windowName = "popup check";
-    return window.open(
-      "http://www.google.in",
-      windowName,
-      "width=1, height=1, left=0, top=0"
-    );
-  };
+  // const checkPopup = () => {
+  //   var windowName = "popup check";
+  //   return window.open(
+  //     "http://www.google.in",
+  //     windowName,
+  //     "width=1, height=1, left=0, top=0"
+  //   );
+  // };
 
   /**
    * Determine the mobile operating system.
